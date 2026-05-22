@@ -6,22 +6,16 @@
 <title>Teacher Malie | Online English Tutor</title>
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  background: #0B0B0C;
-  color: #F4EBDD;
+  background: #1F1F1D;
+  color: #F4F1EA;
 }
-
-/* HERO */
 
 .hero {
   min-height: 100vh;
@@ -31,26 +25,17 @@ body {
   text-align: center;
   padding: 50px 22px;
   background:
-    radial-gradient(circle at 18% 18%, rgba(216, 178, 123, 0.20), transparent 32%),
-    radial-gradient(circle at 82% 65%, rgba(95, 199, 198, 0.12), transparent 34%),
-    radial-gradient(circle at 55% 85%, rgba(168, 139, 214, 0.13), transparent 30%),
-    linear-gradient(180deg, #141313 0%, #0B0B0C 70%);
+    radial-gradient(circle at 18% 20%, rgba(154,161,123,0.20), transparent 32%),
+    radial-gradient(circle at 82% 65%, rgba(216,122,122,0.14), transparent 34%),
+    radial-gradient(circle at 50% 85%, rgba(213,165,90,0.12), transparent 32%),
+    linear-gradient(180deg, #343330 0%, #1F1F1D 75%);
 }
 
-.hero-content {
-  max-width: 920px;
-}
-.logo{
-  width:220px;
-  max-width:80%;
-  margin-bottom:25px;
-  filter:
-    drop-shadow(0 0 18px rgba(216,178,123,0.18))
-    drop-shadow(0 0 30px rgba(95,199,198,0.08));
-}
+.hero-content { max-width: 920px; }
+
 .small-title {
   letter-spacing: 10px;
-  color: #E5C78B;
+  color: #F4F1EA;
   font-size: 1rem;
   margin-bottom: 16px;
 }
@@ -59,30 +44,26 @@ h1 {
   font-size: clamp(4rem, 12vw, 8rem);
   margin: 0;
   line-height: 1;
-  color: #D8B27B;
-  text-shadow:
-    0 0 20px rgba(216, 178, 123, 0.22),
-    0 0 45px rgba(95, 199, 198, 0.12);
+  color: #9AA17B;
+  text-shadow: 0 0 16px rgba(244,241,234,0.12);
 }
 
 .tagline {
   font-size: clamp(1.15rem, 3vw, 1.7rem);
-  color: #E8DCC8;
+  color: #D5A55A;
   margin-top: 28px;
   line-height: 1.7;
   font-style: italic;
 }
 
 .subtext {
-  color: #9CC7E8;
+  color: #C9C6BE;
   margin-top: 18px;
   font-size: 1rem;
   line-height: 1.8;
 }
 
-.button-group {
-  margin-top: 38px;
-}
+.button-group { margin-top: 38px; }
 
 .button {
   display: inline-block;
@@ -95,22 +76,17 @@ h1 {
 }
 
 .primary {
-  background: linear-gradient(90deg, #B69163, #D8B27B, #E5C78B);
-  color: #0B0B0C;
-  box-shadow: 0 0 20px rgba(216, 178, 123, 0.18);
+  background: #D5A55A;
+  color: #1F1F1D;
 }
 
 .secondary {
-  border: 1px solid #5FC7C6;
-  color: #9CC7E8;
-  background: rgba(95, 199, 198, 0.05);
+  border: 1px solid #9AA17B;
+  color: #F4F1EA;
+  background: rgba(154,161,123,0.08);
 }
 
-.button:hover {
-  transform: translateY(-3px);
-}
-
-/* SECTIONS */
+.button:hover { transform: translateY(-3px); }
 
 section {
   max-width: 1100px;
@@ -120,9 +96,8 @@ section {
 
 h2 {
   font-size: clamp(2rem, 5vw, 2.8rem);
-  color: #D8B27B;
+  color: #D5A55A;
   margin-bottom: 30px;
-  text-shadow: 0 0 18px rgba(216, 178, 123, 0.14);
 }
 
 .grid {
@@ -132,71 +107,47 @@ h2 {
 }
 
 .card {
-  background:
-    linear-gradient(180deg, rgba(40, 34, 28, 0.92), rgba(20, 19, 19, 0.96));
-  border: 1px solid rgba(182, 145, 99, 0.26);
+  background: #2B2B28;
+  border: 1px solid rgba(244,241,234,0.16);
   border-radius: 22px;
   padding: 28px;
-  box-shadow:
-    0 0 30px rgba(0, 0, 0, 0.35),
-    inset 0 0 18px rgba(216, 178, 123, 0.03);
+  box-shadow: 0 0 30px rgba(0,0,0,0.35);
 }
 
 .card h3 {
-  color: #E5C78B;
+  color: #9AA17B;
   margin-top: 0;
 }
 
 .card p {
-  color: #E8DCC8;
+  color: #F4F1EA;
   line-height: 1.75;
 }
 
 .card:hover {
-  border-color: rgba(95, 199, 198, 0.35);
+  border-color: #D87A7A;
 }
 
-/* CONTACT */
-
-.contact {
-  text-align: center;
-}
+.contact { text-align: center; }
 
 .contact a {
-  color: #9CC7E8;
+  color: #D87A7A;
   text-decoration: none;
   font-weight: bold;
 }
 
-.contact a:hover {
-  color: #5FC7C6;
-}
-
-/* FOOTER */
-
 footer {
   text-align: center;
   padding: 35px 20px;
-  border-top: 1px solid rgba(182, 145, 99, 0.18);
-  color: #908B98;
-  background: #080808;
+  border-top: 1px solid rgba(244,241,234,0.12);
+  color: #C9C6BE;
+  background: #141313;
 }
 
-/* MOBILE */
-
 @media (max-width: 700px) {
-  .small-title {
-    letter-spacing: 6px;
-  }
-
-  section {
-    padding: 60px 18px;
-  }
-
-  .button {
-    width: 100%;
-    max-width: 280px;
-  }
+  .small-title { letter-spacing: 6px; }
+  section { padding: 60px 18px; }
+  .button { width: 100%; max-width: 280px; }
 }
 </style>
 </head>
@@ -205,9 +156,6 @@ footer {
 
 <section class="hero">
   <div class="hero-content">
-
-    <img src="teacher-malie-logo.png" alt="Teacher Malie Logo" class="logo">
-
     <div class="small-title">TEACHER</div>
 
     <h1>Malie</h1>
@@ -229,24 +177,20 @@ footer {
 
 <section>
   <h2>About Me</h2>
-
   <div class="card">
     <p>
-      I’m Malie Brown, a CELTA and TEFL-certified Online English Tutor from South Africa with over seven years of experience teaching learners worldwide.
-      I specialise in General English, Business English, IELTS preparation, pronunciation, fluency development, and learner confidence.
+      I’m Malie Brown, a CELTA and TEFL-certified Online English Tutor from South Africa with over seven years of experience teaching learners worldwide. I specialise in General English, Business English, IELTS preparation, pronunciation, fluency development, and learner confidence.
     </p>
   </div>
 </section>
 
 <section>
   <h2>Current Roles</h2>
-
   <div class="grid">
     <div class="card">
       <h3>CV Skills</h3>
       <p>Online English Tutor</p>
     </div>
-
     <div class="card">
       <h3>The Really Great Teacher Company</h3>
       <p>Online English Tutor</p>
@@ -256,18 +200,15 @@ footer {
 
 <section>
   <h2>Work With Me</h2>
-
   <div class="grid">
     <div class="card">
       <h3>For Adult Learners</h3>
       <p>Build speaking confidence, improve fluency, and communicate more naturally in English.</p>
     </div>
-
     <div class="card">
       <h3>For Professionals</h3>
       <p>Practise workplace English, interviews, meetings, presentations, and business communication.</p>
     </div>
-
     <div class="card">
       <h3>For Young Learners</h3>
       <p>Supportive, patient lessons designed to help children grow in confidence and enjoy learning English.</p>
@@ -277,23 +218,19 @@ footer {
 
 <section id="services">
   <h2>Teaching Services</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Business English</h3>
       <p>Professional communication, workplace vocabulary, meetings, interviews, and confidence building.</p>
     </div>
-
     <div class="card">
       <h3>General English</h3>
       <p>Grammar, vocabulary, fluency, pronunciation, and everyday communication skills.</p>
     </div>
-
     <div class="card">
       <h3>Young Learners</h3>
       <p>Patient and engaging lessons for younger students.</p>
     </div>
-
     <div class="card">
       <h3>IELTS & Cambridge</h3>
       <p>Structured exam preparation, speaking practice, feedback, and lesson planning.</p>
@@ -303,23 +240,19 @@ footer {
 
 <section>
   <h2>Qualifications</h2>
-
   <div class="grid">
     <div class="card">
       <h3>CELTA</h3>
       <p>Certificate in Teaching English to Speakers of Other Languages</p>
     </div>
-
     <div class="card">
       <h3>TEFL</h3>
       <p>Certified English language teacher</p>
     </div>
-
     <div class="card">
       <h3>STEM.org Certified™ Master Trainer</h3>
       <p>STEM and inquiry-based learning integration</p>
     </div>
-
     <div class="card">
       <h3>BCom Project Management</h3>
       <p>MANCOSA student</p>
@@ -329,7 +262,6 @@ footer {
 
 <section class="contact">
   <h2>Contact</h2>
-
   <div class="card">
     <p>Email: <a href="mailto:hello@malie.me">hello@malie.me</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/maliebrown" target="_blank">linkedin.com/in/maliebrown</a></p>
