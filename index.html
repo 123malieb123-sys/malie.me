@@ -6,42 +6,6 @@
 <title>Teacher Malie | Online English Tutor</title>
 
 <style>
-  .hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      to bottom right,
-      rgba(255,255,255,0.35),
-      rgba(255,255,255,0)
-    );
-  pointer-events: none;
-}
-
-.hero-logo img {
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.08));
-}
-
-.intro {
-  line-height: 1.9;
-}
-
-.button {
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    color 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
 :root {
   --cream: #F8EFE4;
   --soft-cream: #FFF8F0;
@@ -52,9 +16,13 @@
   --line: #D9C7B3;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -86,7 +54,9 @@ nav a {
   font-size: 1.1rem;
 }
 
-nav a:hover { color: var(--coral); }
+nav a:hover {
+  color: var(--coral);
+}
 
 .hero {
   text-align: center;
@@ -98,13 +68,13 @@ nav a:hover { color: var(--coral); }
 }
 
 .hero-logo {
-  max-width: 900px;
+  max-width: 850px;
   margin: 0 auto 35px;
 }
 
 .hero-logo img {
   width: 100%;
-  max-height: 420px;
+  max-height: 390px;
   object-fit: contain;
   display: block;
   margin: auto;
@@ -114,6 +84,7 @@ nav a:hover { color: var(--coral); }
   max-width: 760px;
   margin: 25px auto 0;
   font-size: 1.25rem;
+  line-height: 1.8;
 }
 
 .services-line {
@@ -128,7 +99,9 @@ nav a:hover { color: var(--coral); }
   padding: 0 12px;
 }
 
-.button-group { margin-top: 35px; }
+.button-group {
+  margin-top: 35px;
+}
 
 .button {
   display: inline-block;
@@ -138,6 +111,11 @@ nav a:hover { color: var(--coral); }
   text-decoration: none;
   font-weight: bold;
   border: 2px solid var(--line);
+  transition: transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
 }
 
 .button.primary {
@@ -149,9 +127,12 @@ nav a:hover { color: var(--coral); }
 .button.secondary {
   color: var(--sage);
   border-color: var(--sage);
+  background: transparent;
 }
 
-section { padding: 60px 0; }
+section {
+  padding: 60px 0;
+}
 
 h2 {
   color: var(--coral);
@@ -169,7 +150,7 @@ h2 {
   background: var(--soft-cream);
   border: 1px solid var(--line);
   border-radius: 20px;
-  padding: 32px;
+  padding: 36px;
 }
 
 .about-box p {
@@ -191,7 +172,9 @@ h2 {
   margin: 0 0 12px;
 }
 
-.card p { margin: 0; }
+.card p {
+  margin: 0;
+}
 
 .qualifications ul {
   list-style: none;
@@ -219,41 +202,20 @@ h2 {
   font-weight: bold;
 }
 
-.contact-box strong { color: var(--coral); }
+.contact-box strong {
+  color: var(--coral);
+}
 
 footer {
   text-align: center;
   padding: 35px 0 10px;
   color: var(--sage);
 }
-section {
-  margin-bottom: 30px;
-}
 
-.about-box,
-.card,
-.qualifications ul,
-.contact-box {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-}
-
-.grid {
-  margin-top: 30px;
-}
-
-.about-box {
-  padding: 42px;
-}
-
-.card {
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-@media(max-width:760px) {
-  .wrapper { padding: 20px; }
+@media(max-width: 760px) {
+  .wrapper {
+    padding: 20px;
+  }
 
   nav {
     justify-content: center;
@@ -261,7 +223,13 @@ section {
     gap: 18px;
   }
 
-  .hero { padding: 45px 20px; }
+  .hero {
+    padding: 45px 20px;
+  }
+
+  .hero-logo img {
+    max-height: 300px;
+  }
 
   .contact-box {
     grid-template-columns: 1fr;
@@ -304,21 +272,17 @@ section {
   <h2>About Me</h2>
 
   <div class="about-box">
-  <p>Hello, I’m Malie Brown — a CELTA-certified Online English Tutor with over 7 years of experience helping learners build confidence and fluency in English.</p>
+    <p>Hello, I’m Malie Brown — a CELTA-certified Online English Tutor with over 7 years of experience helping learners build confidence and fluency in English.</p>
 
-  <p>I specialise in General English, Business English, IELTS/Cambridge preparation, and young learner instruction. My lessons are practical, supportive, and tailored to each student’s goals.</p>
+    <p>I specialise in General English, Business English, IELTS/Cambridge preparation, and young learner instruction. My lessons are practical, supportive, and tailored to each student’s goals.</p>
 
-  <p>My teaching focuses on real-world communication, pronunciation, fluency, and confidence. I also bring experience in business, administration, recruitment, and client communication, which helps me support adult learners and professionals.</p>
+    <p>My teaching focuses on real-world communication, pronunciation, fluency, and confidence. I also bring experience in business, administration, recruitment, and client communication, which helps me support adult learners and professionals.</p>
 
-  <p>I am currently studying toward a BCom in Project Management and am also a STEM.org Certified™ Master Trainer.</p>
-</div>
+    <p>I am currently studying toward a BCom in Project Management and am also a STEM.org Certified™ Master Trainer.</p>
+  </div>
 </section>
 
 <section id="services">
-  <h2>Teaching Services</h2>
-
-  <div class="grid">
-    <section id="services">
   <h2>Teaching Services</h2>
 
   <div class="grid">
