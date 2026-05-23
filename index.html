@@ -9,7 +9,7 @@
 :root {
   --chalkboard: #1F1F1D;
   --soft-black: #343330;
-  --card: #2B2B28;
+  --card: #252522;
   --chalk-white: #F4F1EA;
   --sage: #9AA17B;
   --coral: #D87A7A;
@@ -17,23 +17,46 @@
   --olive: #7D8760;
   --chalk-grey: #C9C6BE;
   --peach: #E6B18A;
-  --border: #3A3936;
+  --border: #4A4944;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--chalkboard);
+  background-color: var(--chalkboard);
   color: var(--chalk-white);
-  font-family: Lato, Nunito Sans, Open Sans;
+  font-family: Lato, "Nunito Sans", "Open Sans", Arial, sans-serif;
   line-height: 1.7;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(244,241,234,0.018) 0px,
+      rgba(244,241,234,0.018) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(244,241,234,0.012) 0px,
+      rgba(244,241,234,0.012) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(244,241,234,0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+  opacity: 0.28;
+  mix-blend-mode: soft-light;
 }
 
 .hero {
@@ -43,11 +66,15 @@ body {
   justify-content: center;
   padding: 60px 22px;
   text-align: center;
-  background: var(--chalkboard);
+  background: transparent;
 }
 
 .hero-content {
   max-width: 900px;
+  border: 2px solid rgba(201,198,190,0.22);
+  padding: 52px 28px;
+  border-radius: 6px;
+  background: rgba(31,31,29,0.72);
 }
 
 .small-title {
@@ -56,15 +83,16 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 18px;
-  opacity: 0.88;
+  opacity: 0.78;
 }
 
 h1 {
   margin: 0;
   color: var(--sage);
   font-size: clamp(4rem, 12vw, 8rem);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1;
+  opacity: 0.9;
 }
 
 .tagline {
@@ -73,6 +101,7 @@ h1 {
   font-style: italic;
   margin: 28px auto 0;
   max-width: 760px;
+  opacity: 0.88;
 }
 
 .subtext {
@@ -81,23 +110,23 @@ h1 {
   font-size: 1rem;
 }
 
-.button-group {
-  margin-top: 38px;
-}
+.button-group { margin-top: 38px; }
 
 .button {
   display: inline-block;
-  padding: 13px 28px;
+  padding: 12px 26px;
   margin: 10px;
-  border-radius: 8px;
+  border-radius: 4px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border: 1px solid var(--border);
+  box-shadow: none;
 }
 
 .primary {
-  background: var(--coral);
-  color: var(--chalkboard);
+  background: transparent;
+  color: var(--mustard);
+  border-color: var(--mustard);
 }
 
 .secondary {
@@ -115,8 +144,9 @@ section {
 h2 {
   color: var(--coral);
   font-size: clamp(2rem, 5vw, 2.7rem);
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 28px;
+  opacity: 0.9;
 }
 
 .grid {
@@ -126,34 +156,38 @@ h2 {
 }
 
 .card {
-  background: var(--card);
+  background-color: var(--card);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 6px;
   padding: 28px;
+  box-shadow: none;
+  background-image:
+    repeating-linear-gradient(
+      -8deg,
+      rgba(244,241,234,0.018) 0px,
+      rgba(244,241,234,0.018) 1px,
+      transparent 1px,
+      transparent 7px
+    );
 }
 
 .card h3 {
   color: var(--sage);
   margin-top: 0;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .card p {
   color: var(--chalk-white);
   margin-bottom: 0;
+  opacity: 0.88;
 }
 
-.note {
-  color: var(--chalk-grey);
-}
+.note { color: var(--chalk-grey); }
 
-.accent {
-  color: var(--peach);
-}
+.accent { color: var(--peach); }
 
-.contact {
-  text-align: center;
-}
+.contact { text-align: center; }
 
 .contact a {
   color: var(--coral);
@@ -165,17 +199,17 @@ footer {
   text-align: center;
   padding: 35px 20px;
   color: var(--chalk-grey);
-  background: #141313;
+  background: #1A1A18;
   border-top: 1px solid var(--border);
 }
 
 @media (max-width: 700px) {
-  .small-title {
-    letter-spacing: 6px;
-  }
+  .small-title { letter-spacing: 6px; }
 
-  section {
-    padding: 58px 18px;
+  section { padding: 58px 18px; }
+
+  .hero-content {
+    padding: 40px 20px;
   }
 
   .button {
