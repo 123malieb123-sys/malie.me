@@ -6,142 +6,136 @@
 <title>Teacher Malie | Online English Tutor</title>
 
 <style>
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background: #1F1F1D;
-  color: #F4F1EA;
+*{
+  box-sizing:border-box;
 }
 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 50px 22px;
-  background:
-    radial-gradient(circle at 18% 20%, rgba(154,161,123,0.20), transparent 32%),
-    radial-gradient(circle at 82% 65%, rgba(216,122,122,0.14), transparent 34%),
-    radial-gradient(circle at 50% 85%, rgba(213,165,90,0.12), transparent 32%),
-    linear-gradient(180deg, #343330 0%, #1F1F1D 75%);
+body{
+  margin:0;
+  font-family:Georgia, serif;
+  background:#1F1F1D;
+  color:#F4F1EA;
+  line-height:1.7;
 }
 
-.hero-content { max-width: 920px; }
-
-.small-title {
-  letter-spacing: 10px;
-  color: #F4F1EA;
-  font-size: 1rem;
-  margin-bottom: 16px;
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:60px 20px;
+  background:#1F1F1D;
 }
 
-h1 {
-  font-size: clamp(4rem, 12vw, 8rem);
-  margin: 0;
-  line-height: 1;
-  color: #9AA17B;
-  text-shadow: 0 0 16px rgba(244,241,234,0.12);
+.hero-content{
+  max-width:850px;
 }
 
-.tagline {
-  font-size: clamp(1.15rem, 3vw, 1.7rem);
-  color: #D5A55A;
-  margin-top: 28px;
-  line-height: 1.7;
-  font-style: italic;
+.small-title{
+  color:#F4F1EA;
+  letter-spacing:8px;
+  font-size:1rem;
+  margin-bottom:12px;
 }
 
-.subtext {
-  color: #C9C6BE;
-  margin-top: 18px;
-  font-size: 1rem;
-  line-height: 1.8;
+h1{
+  font-size:clamp(4rem,10vw,7rem);
+  margin:0;
+  color:#9AA17B;
+  font-weight:normal;
 }
 
-.button-group { margin-top: 38px; }
-
-.button {
-  display: inline-block;
-  padding: 14px 30px;
-  margin: 10px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
+.tagline{
+  color:#D5A55A;
+  font-size:1.4rem;
+  margin-top:20px;
+  font-style:italic;
 }
 
-.primary {
-  background: #D5A55A;
-  color: #1F1F1D;
+.subtext{
+  color:#C9C6BE;
+  margin-top:20px;
 }
 
-.secondary {
-  border: 1px solid #9AA17B;
-  color: #F4F1EA;
-  background: rgba(154,161,123,0.08);
+.button-group{
+  margin-top:35px;
 }
 
-.button:hover { transform: translateY(-3px); }
-
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 24px;
+.button{
+  display:inline-block;
+  padding:14px 28px;
+  margin:10px;
+  border-radius:8px;
+  text-decoration:none;
+  transition:0.2s ease;
 }
 
-h2 {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  color: #D5A55A;
-  margin-bottom: 30px;
+.primary{
+  background:#D5A55A;
+  color:#1F1F1D;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+.secondary{
+  border:1px solid #9AA17B;
+  color:#F4F1EA;
+  background:transparent;
 }
 
-.card {
-  background: #2B2B28;
-  border: 1px solid rgba(244,241,234,0.16);
-  border-radius: 22px;
-  padding: 28px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.35);
+.button:hover{
+  opacity:0.9;
 }
 
-.card h3 {
-  color: #9AA17B;
-  margin-top: 0;
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 22px;
 }
 
-.card p {
-  color: #F4F1EA;
-  line-height: 1.75;
+h2{
+  color:#D5A55A;
+  font-size:2.2rem;
+  margin-bottom:30px;
+  font-weight:normal;
 }
 
-.card:hover {
-  border-color: #D87A7A;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
 }
 
-.contact { text-align: center; }
-
-.contact a {
-  color: #D87A7A;
-  text-decoration: none;
-  font-weight: bold;
+.card{
+  background:#2B2B28;
+  border:1px solid #343330;
+  border-radius:12px;
+  padding:28px;
 }
 
-footer {
-  text-align: center;
-  padding: 35px 20px;
-  border-top: 1px solid rgba(244,241,234,0.12);
-  color: #C9C6BE;
-  background: #141313;
+.card h3{
+  color:#9AA17B;
+  margin-top:0;
+  font-weight:normal;
+}
+
+.card p{
+  color:#F4F1EA;
+}
+
+.contact{
+  text-align:center;
+}
+
+.contact a{
+  color:#D87A7A;
+}
+
+footer{
+  text-align:center;
+  padding:35px;
+  color:#C9C6BE;
+  border-top:1px solid #343330;
+  background:#1F1F1D;
 }
 
 @media (max-width: 700px) {
