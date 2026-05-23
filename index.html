@@ -11,20 +11,14 @@
   --soft-cream: #FFF8F0;
   --charcoal: #2F2B27;
   --sage: #7F9278;
-  --soft-sage: #DDE5D6;
   --coral: #D98265;
   --mustard: #C98A2E;
-  --peach: #E6B18A;
   --line: #D9C7B3;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -34,78 +28,58 @@ body {
   line-height: 1.7;
 }
 
-.wrapper{
-  width:100%;
-  max-width:1400px;
-  margin:auto;
-  padding:30px 40px 80px;
+.wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px 60px 80px;
 }
 
-nav{
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-  padding:24px 60px;
-  margin-bottom:40px;
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 55px;
+  padding: 20px 0 45px;
 }
 
-nav a{
-  color:var(--charcoal);
-  text-decoration:none;
-  margin-left:60px;
-  font-weight:600;
-  font-size:1.1rem;
-}
-
-nav a:hover{
-  color:var(--coral);
-}
-
-.hero{
-  min-height:auto;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:80px 60px;
-  background:var(--soft-cream);
-  border:1px solid var(--line);
-  border-radius:34px;
-  margin-bottom:70px;
-}
-
-.teacher {
+nav a {
   color: var(--charcoal);
-  letter-spacing: 10px;
-  font-size: 1.3rem;
-  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
-h1 {
-  margin: 8px 0 0;
-  color: var(--sage);
-  font-size: clamp(5rem, 14vw, 10rem);
-  line-height: 0.9;
-  font-weight: 400;
-  font-style: italic;
+nav a:hover { color: var(--coral); }
+
+.hero {
+  text-align: center;
+  padding: 70px 60px;
+  background: var(--soft-cream);
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  margin-bottom: 75px;
 }
 
-.tagline {
-  color: var(--mustard);
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-style: italic;
-  margin: 22px 0 12px;
+.hero-logo {
+  max-width: 920px;
+  margin: 0 auto 35px;
+}
+
+.hero-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .intro {
   max-width: 760px;
-  margin: 26px auto 0;
-  color: var(--charcoal);
-  font-size: 1.28rem;
+  margin: 25px auto 0;
+  font-size: 1.25rem;
 }
 
 .services-line {
-  margin-top: 24px;
+  margin-top: 22px;
   color: var(--sage);
   font-size: 1.05rem;
   font-weight: bold;
@@ -116,21 +90,16 @@ h1 {
   padding: 0 12px;
 }
 
-.button-group {
-  margin-top: 38px;
-}
+.button-group { margin-top: 35px; }
 
 .button {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 14px 30px;
   margin: 10px;
-  text-decoration: none;
   border-radius: 14px;
-  font-size: 1.05rem;
-  border: 2px solid var(--line);
-  color: var(--charcoal);
-  background: transparent;
+  text-decoration: none;
   font-weight: bold;
+  border: 2px solid var(--line);
 }
 
 .button.primary {
@@ -144,9 +113,7 @@ h1 {
   border-color: var(--sage);
 }
 
-section {
-  padding: 64px 0;
-}
+section { padding: 60px 0; }
 
 h2 {
   color: var(--coral);
@@ -157,17 +124,26 @@ h2 {
   margin: 0 0 28px;
 }
 
+.about-box,
+.card,
+.qualifications ul,
+.contact-box {
+  background: var(--soft-cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.about-box p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
-}
-
-.card {
-  background: var(--soft-cream);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 28px;
 }
 
 .card h3 {
@@ -177,31 +153,15 @@ h2 {
   margin: 0 0 12px;
 }
 
-.card p {
-  color: var(--charcoal);
-  margin: 0;
-}
-
-.about-box {
-  background: var(--soft-cream);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 32px;
-}
+.card p { margin: 0; }
 
 .qualifications ul {
   list-style: none;
-  padding: 0;
   margin: 0;
-  background: var(--soft-cream);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 30px;
 }
 
 .qualifications li {
   margin: 12px 0;
-  color: var(--charcoal);
 }
 
 .qualifications li::before {
@@ -213,10 +173,6 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 30px;
-  background: var(--soft-cream);
 }
 
 .contact-box a {
@@ -225,88 +181,28 @@ h2 {
   font-weight: bold;
 }
 
-.contact-box strong {
-  color: var(--coral);
-}
+.contact-box strong { color: var(--coral); }
 
 footer {
   text-align: center;
-  padding: 34px 0 10px;
+  padding: 35px 0 10px;
   color: var(--sage);
 }
-.hero-logo{
-  margin:0 auto 30px;
-  max-width:900px;
-}
 
-.hero-logo{
-  width:100%;
-  max-width:1100px;
-  margin:0 auto 40px;
-}
+@media(max-width:760px) {
+  .wrapper { padding: 20px; }
 
-.hero-logo img{
-  width:100%;
-  height:auto;
-  display:block;
-  margin:auto;
-}
-
-  nav a {
-    display: inline-block;
-    margin: 10px;
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
   }
+
+  .hero { padding: 45px 20px; }
 
   .contact-box {
     grid-template-columns: 1fr;
   }
-
-  .wrapper {
-    padding: 18px;
-  }
-}
-  .about-section{
-  display:grid;
-  grid-template-columns:320px 1fr;
-  gap:60px;
-  align-items:center;
-  padding:80px 20px;
-}
-
-.about-image img{
-  width:100%;
-  border-radius:28px;
-  border:1px solid var(--line);
-  display:block;
-}
-
-.about-content h2{
-  margin-top:0;
-}
-
-.about-content p{
-  font-size:1.08rem;
-  margin-bottom:22px;
-  max-width:700px;
-}
-
-@media(max-width:900px){
-
-  .about-section{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-
-  .about-image{
-    max-width:320px;
-    margin:auto;
-  }
-
-  .about-content p{
-    margin-left:auto;
-    margin-right:auto;
-  }
-
 }
 </style>
 </head>
@@ -316,30 +212,28 @@ footer {
 <div class="wrapper">
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#qualifications">Qualifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#qualifications">Qualifications</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <header class="hero">
-  <div>
   <div class="hero-logo">
-  <img src="logo.1.png" alt="Teacher Malie Logo">
-</div>
+    <img src="logo.1.png" alt="Teacher Malie Logo">
+  </div>
 
-    <p class="intro">
-      CELTA-certified Online English Tutor helping learners and professionals build confidence in English.
-    </p>
+  <p class="intro">
+    CELTA-certified Online English Tutor helping learners and professionals build confidence in English.
+  </p>
 
-    <p class="services-line">
-      General English <span>•</span> Business English <span>•</span> IELTS Preparation <span>•</span> Young Learners
-    </p>
+  <p class="services-line">
+    General English <span>•</span> Business English <span>•</span> IELTS Preparation <span>•</span> Young Learners
+  </p>
 
-    <div class="button-group">
-      <a class="button primary" href="mailto:hello@malie.me">Book a Lesson</a>
-      <a class="button secondary" href="#services">View Services</a>
-    </div>
+  <div class="button-group">
+    <a class="button primary" href="mailto:hello@malie.me">Book a Lesson</a>
+    <a class="button secondary" href="#services">View Services</a>
   </div>
 </header>
 
@@ -347,29 +241,17 @@ footer {
   <h2>About Me</h2>
 
   <div class="about-box">
-    <p>
-Hello, I’m Malie Brown — a CELTA-certified Online English Tutor with over 7 years of experience helping learners worldwide build confidence and fluency in English.
-</p>
+    <p>Hello, I’m Malie Brown — a CELTA-certified Online English Tutor with over 7 years of experience helping learners worldwide build confidence and fluency in English.</p>
 
-<p>
-I specialise in General English, Business English, IELTS/Cambridge preparation, and young learner instruction, creating lessons that are practical, engaging, and tailored to each student’s goals.
-</p>
+    <p>I specialise in General English, Business English, IELTS/Cambridge preparation, and young learner instruction, creating lessons that are practical, engaging, and tailored to each student’s goals.</p>
 
-<p>
-My teaching approach focuses on real-world communication, pronunciation, fluency, and learner confidence. I believe students learn best in supportive environments where lessons are interactive, structured, and adapted to individual learning styles.
-</p>
+    <p>My teaching approach focuses on real-world communication, pronunciation, fluency, and learner confidence. I believe students learn best in supportive environments where lessons are interactive, structured, and adapted to individual learning styles.</p>
 
-<p>
-Alongside teaching, I am currently studying toward a BCom in Project Management and am also a STEM.org Certified™ Master Trainer, allowing me to integrate creativity, critical thinking, and digital learning tools into my lessons.
-</p>
+    <p>Alongside teaching, I am currently studying toward a BCom in Project Management and am also a STEM.org Certified™ Master Trainer, allowing me to integrate creativity, critical thinking, and digital learning tools into my lessons.</p>
 
-<p>
-Before moving into education, I gained professional experience in insurance, administration, recruitment, and client communication roles. This background helps me support adult learners and professionals preparing for interviews, presentations, workplace communication, and international opportunities.
-</p>
+    <p>Before moving into education, I gained professional experience in insurance, administration, recruitment, and client communication roles. This background helps me support adult learners and professionals preparing for interviews, presentations, workplace communication, and international opportunities.</p>
 
-<p>
-I am passionate about helping students communicate naturally, grow in confidence, and achieve meaningful progress in English.
-</p>
+    <p>I am passionate about helping students communicate naturally, grow in confidence, and achieve meaningful progress in English.</p>
   </div>
 </section>
 
