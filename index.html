@@ -6,142 +6,182 @@
 <title>Teacher Malie | Online English Tutor</title>
 
 <style>
-*{
-  box-sizing:border-box;
+:root {
+  --chalkboard: #1F1F1D;
+  --soft-black: #343330;
+  --card: #2B2B28;
+  --chalk-white: #F4F1EA;
+  --sage: #9AA17B;
+  --coral: #D87A7A;
+  --mustard: #D5A55A;
+  --olive: #7D8760;
+  --chalk-grey: #C9C6BE;
+  --peach: #E6B18A;
+  --border: #3A3936;
 }
 
-body{
-  margin:0;
-  font-family:Georgia, serif;
-  background:#1F1F1D;
-  color:#F4F1EA;
-  line-height:1.7;
+* {
+  box-sizing: border-box;
 }
 
-.hero{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:60px 20px;
-  background:#1F1F1D;
+html {
+  scroll-behavior: smooth;
 }
 
-.hero-content{
-  max-width:850px;
+body {
+  margin: 0;
+  background: var(--chalkboard);
+  color: var(--chalk-white);
+  font-family: Lato, Nunito Sans, Open Sans;
+  line-height: 1.7;
 }
 
-.small-title{
-  color:#F4F1EA;
-  letter-spacing:8px;
-  font-size:1rem;
-  margin-bottom:12px;
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 22px;
+  text-align: center;
+  background: var(--chalkboard);
 }
 
-h1{
-  font-size:clamp(4rem,10vw,7rem);
-  margin:0;
-  color:#9AA17B;
-  font-weight:normal;
+.hero-content {
+  max-width: 900px;
 }
 
-.tagline{
-  color:#D5A55A;
-  font-size:1.4rem;
-  margin-top:20px;
-  font-style:italic;
+.small-title {
+  color: var(--chalk-white);
+  letter-spacing: 9px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  opacity: 0.88;
 }
 
-.subtext{
-  color:#C9C6BE;
-  margin-top:20px;
+h1 {
+  margin: 0;
+  color: var(--sage);
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: normal;
+  line-height: 1;
 }
 
-.button-group{
-  margin-top:35px;
+.tagline {
+  color: var(--coral);
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  font-style: italic;
+  margin: 28px auto 0;
+  max-width: 760px;
 }
 
-.button{
-  display:inline-block;
-  padding:14px 28px;
-  margin:10px;
-  border-radius:8px;
-  text-decoration:none;
-  transition:0.2s ease;
+.subtext {
+  color: var(--chalk-grey);
+  margin-top: 20px;
+  font-size: 1rem;
 }
 
-.primary{
-  background:#D5A55A;
-  color:#1F1F1D;
+.button-group {
+  margin-top: 38px;
 }
 
-.secondary{
-  border:1px solid #9AA17B;
-  color:#F4F1EA;
-  background:transparent;
+.button {
+  display: inline-block;
+  padding: 13px 28px;
+  margin: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid var(--border);
 }
 
-.button:hover{
-  opacity:0.9;
+.primary {
+  background: var(--coral);
+  color: var(--chalkboard);
 }
 
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:70px 22px;
+.secondary {
+  background: transparent;
+  color: var(--chalk-white);
+  border-color: var(--sage);
 }
 
-h2{
-  color:#D5A55A;
-  font-size:2.2rem;
-  margin-bottom:30px;
-  font-weight:normal;
+section {
+  max-width: 1080px;
+  margin: auto;
+  padding: 72px 24px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:22px;
+h2 {
+  color: var(--coral);
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  font-weight: normal;
+  margin-bottom: 28px;
 }
 
-.card{
-  background:#2B2B28;
-  border:1px solid #343330;
-  border-radius:12px;
-  padding:28px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
 }
 
-.card h3{
-  color:#9AA17B;
-  margin-top:0;
-  font-weight:normal;
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
 }
 
-.card p{
-  color:#F4F1EA;
+.card h3 {
+  color: var(--sage);
+  margin-top: 0;
+  font-weight: normal;
 }
 
-.contact{
-  text-align:center;
+.card p {
+  color: var(--chalk-white);
+  margin-bottom: 0;
 }
 
-.contact a{
-  color:#D87A7A;
+.note {
+  color: var(--chalk-grey);
 }
 
-footer{
-  text-align:center;
-  padding:35px;
-  color:#C9C6BE;
-  border-top:1px solid #343330;
-  background:#1F1F1D;
+.accent {
+  color: var(--peach);
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: var(--coral);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: var(--chalk-grey);
+  background: #141313;
+  border-top: 1px solid var(--border);
 }
 
 @media (max-width: 700px) {
-  .small-title { letter-spacing: 6px; }
-  section { padding: 60px 18px; }
-  .button { width: 100%; max-width: 280px; }
+  .small-title {
+    letter-spacing: 6px;
+  }
+
+  section {
+    padding: 58px 18px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 280px;
+  }
 }
 </style>
 </head>
@@ -150,16 +190,14 @@ footer{
 
 <section class="hero">
   <div class="hero-content">
-    <div class="small-title">TEACHER</div>
+    <div class="small-title">Teacher</div>
 
     <h1>Malie</h1>
 
-    <p class="tagline">
-      CELTA-certified Online English Tutor helping learners and professionals build confidence in English.
-    </p>
+    <p class="tagline">It takes a village...</p>
 
     <p class="subtext">
-      General English • Business English • IELTS Preparation • Young Learners
+      CELTA-certified Online English Tutor helping learners and professionals build confidence in English.
     </p>
 
     <div class="button-group">
@@ -171,6 +209,7 @@ footer{
 
 <section>
   <h2>About Me</h2>
+
   <div class="card">
     <p>
       I’m Malie Brown, a CELTA and TEFL-certified Online English Tutor from South Africa with over seven years of experience teaching learners worldwide. I specialise in General English, Business English, IELTS preparation, pronunciation, fluency development, and learner confidence.
@@ -178,55 +217,27 @@ footer{
   </div>
 </section>
 
-<section>
-  <h2>Current Roles</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>CV Skills</h3>
-      <p>Online English Tutor</p>
-    </div>
-    <div class="card">
-      <h3>The Really Great Teacher Company</h3>
-      <p>Online English Tutor</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Work With Me</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>For Adult Learners</h3>
-      <p>Build speaking confidence, improve fluency, and communicate more naturally in English.</p>
-    </div>
-    <div class="card">
-      <h3>For Professionals</h3>
-      <p>Practise workplace English, interviews, meetings, presentations, and business communication.</p>
-    </div>
-    <div class="card">
-      <h3>For Young Learners</h3>
-      <p>Supportive, patient lessons designed to help children grow in confidence and enjoy learning English.</p>
-    </div>
-  </div>
-</section>
-
 <section id="services">
   <h2>Teaching Services</h2>
+
   <div class="grid">
     <div class="card">
-      <h3>Business English</h3>
-      <p>Professional communication, workplace vocabulary, meetings, interviews, and confidence building.</p>
-    </div>
-    <div class="card">
       <h3>General English</h3>
-      <p>Grammar, vocabulary, fluency, pronunciation, and everyday communication skills.</p>
+      <p>Build fluency, grammar, vocabulary, pronunciation, and everyday communication skills.</p>
     </div>
+
+    <div class="card">
+      <h3>Business English</h3>
+      <p>Practise workplace English, interviews, meetings, presentations, and professional communication.</p>
+    </div>
+
     <div class="card">
       <h3>Young Learners</h3>
-      <p>Patient and engaging lessons for younger students.</p>
+      <p>Patient, creative, and encouraging lessons designed to help children enjoy learning English.</p>
     </div>
+
     <div class="card">
-      <h3>IELTS & Cambridge</h3>
+      <h3>IELTS & Cambridge Support</h3>
       <p>Structured exam preparation, speaking practice, feedback, and lesson planning.</p>
     </div>
   </div>
@@ -234,28 +245,33 @@ footer{
 
 <section>
   <h2>Qualifications</h2>
+
   <div class="grid">
     <div class="card">
       <h3>CELTA</h3>
-      <p>Certificate in Teaching English to Speakers of Other Languages</p>
+      <p>Certificate in Teaching English to Speakers of Other Languages.</p>
     </div>
+
     <div class="card">
       <h3>TEFL</h3>
-      <p>Certified English language teacher</p>
+      <p>Certified English language teacher.</p>
     </div>
+
     <div class="card">
       <h3>STEM.org Certified™ Master Trainer</h3>
-      <p>STEM and inquiry-based learning integration</p>
+      <p>STEM and inquiry-based learning integration.</p>
     </div>
+
     <div class="card">
       <h3>BCom Project Management</h3>
-      <p>MANCOSA student</p>
+      <p>MANCOSA student.</p>
     </div>
   </div>
 </section>
 
 <section class="contact">
   <h2>Contact</h2>
+
   <div class="card">
     <p>Email: <a href="mailto:hello@malie.me">hello@malie.me</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/maliebrown" target="_blank">linkedin.com/in/maliebrown</a></p>
