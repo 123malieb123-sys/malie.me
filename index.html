@@ -6,277 +6,258 @@
 <title>Teacher Malie | Online English Tutor</title>
 
 <style>
-:root{
-  --board:#1F1F1D;
-  --board-soft:#252522;
-  --chalk:#F4F1EA;
-  --chalk-grey:#C9C6BE;
-  --sage:#9AA17B;
-  --olive:#7D8760;
-  --coral:#D87A7A;
-  --gold:#D5A55A;
-  --peach:#E6B18A;
-  --line:#5B5A52;
+:root {
+  --cream: #F8EFE4;
+  --soft-cream: #FFF8F0;
+  --charcoal: #2F2B27;
+  --sage: #7F9278;
+  --soft-sage: #DDE5D6;
+  --coral: #D98265;
+  --mustard: #C98A2E;
+  --peach: #E6B18A;
+  --line: #D9C7B3;
 }
 
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
-
-body{
-  margin:0;
-  color:var(--chalk);
-  font-family:Georgia,"Times New Roman",serif;
-  background-color:var(--board);
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(244,241,234,.10) 0 1px, transparent 2px),
-    radial-gradient(circle at 80% 70%, rgba(244,241,234,.08) 0 1px, transparent 2px),
-    repeating-linear-gradient(12deg, rgba(244,241,234,.025) 0 1px, transparent 1px 8px),
-    repeating-linear-gradient(-8deg, rgba(0,0,0,.18) 0 2px, transparent 2px 9px);
-  background-size:32px 32px,46px 46px,100% 100%,100% 100%;
-  line-height:1.7;
+* {
+  box-sizing: border-box;
 }
 
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at center, transparent 45%, rgba(0,0,0,.35) 100%);
+html {
+  scroll-behavior: smooth;
 }
 
-.wrapper{
-  max-width:1150px;
-  margin:auto;
-  padding:28px;
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
 }
 
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 0 35px;
-  border-bottom:1px solid rgba(244,241,234,.18);
+.wrapper {
+  max-width: 1150px;
+  margin: auto;
+  padding: 26px;
 }
 
-.brand{
-  font-size:1.9rem;
-  color:var(--chalk);
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 28px;
 }
 
-.brand span{
-  color:var(--sage);
-  font-style:italic;
-  font-size:2.4rem;
+.brand {
+  font-size: 1.8rem;
+  color: var(--charcoal);
 }
 
-nav a{
-  color:var(--chalk);
-  text-decoration:none;
-  margin-left:24px;
+.brand span {
+  color: var(--sage);
+  font-style: italic;
+  font-size: 2.2rem;
 }
 
-nav a:hover{
-  color:var(--gold);
+nav a {
+  color: var(--charcoal);
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: bold;
 }
 
-.hero{
-  min-height:88vh;
-  display:grid;
-  place-items:center;
-  text-align:center;
-  padding:70px 20px 90px;
-  border-bottom:1px solid rgba(244,241,234,.18);
+nav a:hover {
+  color: var(--coral);
 }
 
-.teacher{
-  color:var(--chalk);
-  letter-spacing:10px;
-  font-size:1.4rem;
-  text-transform:uppercase;
+.hero {
+  min-height: 82vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 70px 20px;
+  background: var(--soft-cream);
+  border: 1px solid var(--line);
+  border-radius: 26px;
 }
 
-h1{
-  margin:8px 0 0;
-  color:var(--sage);
-  font-size:clamp(5rem,14vw,10rem);
-  line-height:.9;
-  font-weight:400;
-  font-style:italic;
+.teacher {
+  color: var(--charcoal);
+  letter-spacing: 10px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
 
-.tagline{
-  color:var(--coral);
-  font-size:clamp(1.8rem,4vw,3rem);
-  font-style:italic;
-  margin:20px 0 10px;
+h1 {
+  margin: 8px 0 0;
+  color: var(--sage);
+  font-size: clamp(5rem, 14vw, 10rem);
+  line-height: 0.9;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.intro{
-  max-width:760px;
-  margin:26px auto 0;
-  color:var(--chalk);
-  font-size:1.35rem;
+.tagline {
+  color: var(--mustard);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-style: italic;
+  margin: 22px 0 12px;
 }
 
-.services-line{
-  margin-top:24px;
-  color:var(--chalk-grey);
-  font-size:1.05rem;
+.intro {
+  max-width: 760px;
+  margin: 26px auto 0;
+  color: var(--charcoal);
+  font-size: 1.28rem;
 }
 
-.services-line span{
-  color:var(--coral);
-  padding:0 12px;
+.services-line {
+  margin-top: 24px;
+  color: var(--sage);
+  font-size: 1.05rem;
+  font-weight: bold;
 }
 
-.button-group{
-  margin-top:38px;
+.services-line span {
+  color: var(--coral);
+  padding: 0 12px;
 }
 
-.button{
-  display:inline-block;
-  padding:15px 30px;
-  margin:10px;
-  text-decoration:none;
-  border-radius:3px;
-  font-size:1.05rem;
-  border:2px solid var(--line);
-  color:var(--chalk);
-  background:transparent;
+.button-group {
+  margin-top: 38px;
 }
 
-.button.primary{
-  color:var(--gold);
-  border-color:var(--gold);
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  border: 2px solid var(--line);
+  color: var(--charcoal);
+  background: transparent;
+  font-weight: bold;
 }
 
-.button.secondary{
-  color:var(--sage);
-  border-color:var(--sage);
+.button.primary {
+  background: var(--mustard);
+  border-color: var(--mustard);
+  color: white;
 }
 
-section{
-  padding:58px 0;
-  border-bottom:1px solid rgba(244,241,234,.14);
+.button.secondary {
+  color: var(--sage);
+  border-color: var(--sage);
 }
 
-h2{
-  color:var(--coral);
-  font-size:clamp(2rem,4vw,3rem);
-  font-weight:400;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin:0 0 28px;
+section {
+  padding: 64px 0;
 }
 
-h2::before{
-  content:"❧ ";
-  color:var(--olive);
+h2 {
+  color: var(--coral);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 28px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:24px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
 }
 
-.card{
-  background:rgba(37,37,34,.72);
-  border:2px solid rgba(154,161,123,.55);
-  border-radius:8px;
-  padding:28px;
-  min-height:170px;
+.card {
+  background: var(--soft-cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
 }
 
-.card h3{
-  color:var(--sage);
-  font-size:1.45rem;
-  font-weight:400;
-  margin:0 0 12px;
+.card h3 {
+  color: var(--sage);
+  font-size: 1.45rem;
+  font-weight: 400;
+  margin: 0 0 12px;
 }
 
-.card p{
-  color:var(--chalk);
-  margin:0;
+.card p {
+  color: var(--charcoal);
+  margin: 0;
 }
 
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
+.about-box {
+  background: var(--soft-cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 32px;
 }
 
-.chalk-doodle{
-  min-height:230px;
-  border:2px dashed rgba(201,198,190,.35);
-  display:grid;
-  place-items:center;
-  color:var(--chalk-grey);
-  font-size:4rem;
+.qualifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: var(--soft-cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px;
 }
 
-.qualifications ul{
-  list-style:none;
-  padding:0;
-  margin:0;
+.qualifications li {
+  margin: 12px 0;
+  color: var(--charcoal);
 }
 
-.qualifications li{
-  margin:12px 0;
-  color:var(--chalk);
+.qualifications li::before {
+  content: "✦ ";
+  color: var(--mustard);
 }
 
-.qualifications li::before{
-  content:"☆ ";
-  color:var(--gold);
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px;
+  background: var(--soft-cream);
 }
 
-.contact-box{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  border:2px solid rgba(154,161,123,.55);
-  border-radius:8px;
-  padding:30px;
-  background:rgba(37,37,34,.72);
+.contact-box a {
+  color: var(--sage);
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.contact-box a{
-  color:var(--chalk);
-  text-decoration:none;
+.contact-box strong {
+  color: var(--coral);
 }
 
-.contact-box strong{
-  color:var(--coral);
+footer {
+  text-align: center;
+  padding: 34px 0 10px;
+  color: var(--sage);
 }
 
-footer{
-  text-align:center;
-  padding:30px 0 10px;
-  color:var(--chalk-grey);
-}
-
-@media(max-width:760px){
-  nav{
-    display:block;
-    text-align:center;
+@media(max-width:760px) {
+  nav {
+    display: block;
+    text-align: center;
   }
 
-  nav a{
-    display:inline-block;
-    margin:10px;
+  nav a {
+    display: inline-block;
+    margin: 10px;
   }
 
-  .about-grid,
-  .contact-box{
-    grid-template-columns:1fr;
+  .contact-box {
+    grid-template-columns: 1fr;
   }
 
-  .wrapper{
-    padding:18px;
+  .wrapper {
+    padding: 18px;
   }
 }
 </style>
@@ -311,8 +292,8 @@ footer{
     </p>
 
     <div class="button-group">
-      <a class="button primary" href="mailto:hello@malie.me">Book a Lesson →</a>
-      <a class="button secondary" href="#services">View Services →</a>
+      <a class="button primary" href="mailto:hello@malie.me">Book a Lesson</a>
+      <a class="button secondary" href="#services">View Services</a>
     </div>
   </div>
 </header>
@@ -320,12 +301,10 @@ footer{
 <section id="about">
   <h2>About Me</h2>
 
-  <div class="about-grid">
+  <div class="about-box">
     <p>
       I’m Malie Brown, a CELTA and TEFL-certified Online English Tutor from South Africa with over seven years of experience teaching learners worldwide. I specialise in General English, Business English, IELTS preparation, pronunciation, fluency development, and learner confidence.
     </p>
-
-    <div class="chalk-doodle">✎</div>
   </div>
 </section>
 
