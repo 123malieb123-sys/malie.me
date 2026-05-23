@@ -6,216 +6,277 @@
 <title>Teacher Malie | Online English Tutor</title>
 
 <style>
-:root {
-  --chalkboard: #2B2B28;
-  --soft-black: #343330;
-  --card: #252522;
-  --chalk-white: #F4F1EA;
-  --sage: #9AA17B;
-  --coral: #D87A7A;
-  --mustard: #D5A55A;
-  --olive: #7D8760;
-  --chalk-grey: #C9C6BE;
-  --peach: #E6B18A;
-  --border: #4A4944;
-  --deep-crimson: #A32638;
+:root{
+  --board:#1F1F1D;
+  --board-soft:#252522;
+  --chalk:#F4F1EA;
+  --chalk-grey:#C9C6BE;
+  --sage:#9AA17B;
+  --olive:#7D8760;
+  --coral:#D87A7A;
+  --gold:#D5A55A;
+  --peach:#E6B18A;
+  --line:#5B5A52;
 }
 
-* { box-sizing: border-box; }
+*{box-sizing:border-box}
 
-html { scroll-behavior: smooth; }
+html{scroll-behavior:smooth}
 
-body {
-  margin: 0;
-  background-color: var(--chalkboard);
-  color: var(--chalk-white);
-  font-family: Lato, "Nunito Sans", "Open Sans", Arial, sans-serif;
-  line-height: 1.7;
+body{
+  margin:0;
+  color:var(--chalk);
+  font-family:Georgia,"Times New Roman",serif;
+  background-color:var(--board);
   background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(244,241,234,0.018) 0px,
-      rgba(244,241,234,0.018) 1px,
-      transparent 1px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(244,241,234,0.012) 0px,
-      rgba(244,241,234,0.012) 1px,
-      transparent 1px,
-      transparent 5px
-    );
+    radial-gradient(circle at 20% 30%, rgba(244,241,234,.10) 0 1px, transparent 2px),
+    radial-gradient(circle at 80% 70%, rgba(244,241,234,.08) 0 1px, transparent 2px),
+    repeating-linear-gradient(12deg, rgba(244,241,234,.025) 0 1px, transparent 1px 8px),
+    repeating-linear-gradient(-8deg, rgba(0,0,0,.18) 0 2px, transparent 2px 9px);
+  background-size:32px 32px,46px 46px,100% 100%,100% 100%;
+  line-height:1.7;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    radial-gradient(circle, rgba(244,241,234,0.05) 1px, transparent 1px);
-  background-size: 18px 18px;
-  opacity: 0.28;
-  mix-blend-mode: soft-light;
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at center, transparent 45%, rgba(0,0,0,.35) 100%);
 }
 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 22px;
-  text-align: center;
-  background: transparent;
+.wrapper{
+  max-width:1150px;
+  margin:auto;
+  padding:28px;
 }
 
-.hero-content {
-  max-width: 900px;
-  border: 2px solid rgba(201,198,190,0.22);
-  padding: 52px 28px;
-  border-radius: 6px;
-  background: rgba(31,31,29,0.72);
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 0 35px;
+  border-bottom:1px solid rgba(244,241,234,.18);
 }
 
-.small-title {
-  color: var(--chalk-white);
-  letter-spacing: 9px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-  opacity: 0.78;
+.brand{
+  font-size:1.9rem;
+  color:var(--chalk);
 }
 
-h1 {
-  margin: 0;
-  color: var(--sage);
-  font-size: clamp(4rem, 12vw, 8rem);
-  font-weight: 400;
-  line-height: 1;
-  opacity: 0.9;
+.brand span{
+  color:var(--sage);
+  font-style:italic;
+  font-size:2.4rem;
 }
 
-.tagline {
-  color: var(--deep-crimson);
-  font-size: clamp(1.2rem, 3vw, 1.7rem);
-  font-style: italic;
-  margin: 28px auto 0;
-  max-width: 760px;
-  opacity: 0.88;
+nav a{
+  color:var(--chalk);
+  text-decoration:none;
+  margin-left:24px;
 }
 
-.subtext {
-  color: var(--chalk-grey);
-  margin-top: 20px;
-  font-size: 1rem;
+nav a:hover{
+  color:var(--gold);
 }
 
-.button-group { margin-top: 38px; }
-
-.button {
-  display: inline-block;
-  padding: 12px 26px;
-  margin: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 700;
-  border: 1px solid var(--border);
-  box-shadow: none;
+.hero{
+  min-height:88vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:70px 20px 90px;
+  border-bottom:1px solid rgba(244,241,234,.18);
 }
 
-.primary {
-  background: transparent;
-  color: var(--mustard);
-  border-color: var(--mustard);
+.teacher{
+  color:var(--chalk);
+  letter-spacing:10px;
+  font-size:1.4rem;
+  text-transform:uppercase;
 }
 
-.secondary {
-  background: transparent;
-  color: var(--chalk-white);
-  border-color: var(--sage);
+h1{
+  margin:8px 0 0;
+  color:var(--sage);
+  font-size:clamp(5rem,14vw,10rem);
+  line-height:.9;
+  font-weight:400;
+  font-style:italic;
 }
 
-section {
-  max-width: 1080px;
-  margin: auto;
-  padding: 72px 24px;
+.tagline{
+  color:var(--coral);
+  font-size:clamp(1.8rem,4vw,3rem);
+  font-style:italic;
+  margin:20px 0 10px;
 }
 
-h2 {
-  color: var(--deep-crimson);
-  font-size: clamp(2rem, 5vw, 2.7rem);
-  font-weight: 400;
-  margin-bottom: 28px;
-  opacity: 0.9;
+.intro{
+  max-width:760px;
+  margin:26px auto 0;
+  color:var(--chalk);
+  font-size:1.35rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
+.services-line{
+  margin-top:24px;
+  color:var(--chalk-grey);
+  font-size:1.05rem;
 }
 
-.card {
-  background-color: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 28px;
-  box-shadow: none;
-  background-image:
-    repeating-linear-gradient(
-      -8deg,
-      rgba(244,241,234,0.018) 0px,
-      rgba(244,241,234,0.018) 1px,
-      transparent 1px,
-      transparent 7px
-    );
+.services-line span{
+  color:var(--coral);
+  padding:0 12px;
 }
 
-.card h3 {
-  color: var(--sage);
-  margin-top: 0;
-  font-weight: 400;
+.button-group{
+  margin-top:38px;
 }
 
-.card p {
-  color: var(--chalk-white);
-  margin-bottom: 0;
-  opacity: 0.88;
+.button{
+  display:inline-block;
+  padding:15px 30px;
+  margin:10px;
+  text-decoration:none;
+  border-radius:3px;
+  font-size:1.05rem;
+  border:2px solid var(--line);
+  color:var(--chalk);
+  background:transparent;
 }
 
-.note { color: var(--chalk-grey); }
-
-.accent { color: var(--peach); }
-
-.contact { text-align: center; }
-
-.contact a {
-  color: var(--deep-crimson);
-  text-decoration: none;
-  font-weight: bold;
+.button.primary{
+  color:var(--gold);
+  border-color:var(--gold);
 }
 
-footer {
-  text-align: center;
-  padding: 35px 20px;
-  color: var(--chalk-grey);
-  background: #1A1A18;
-  border-top: 1px solid var(--border);
+.button.secondary{
+  color:var(--sage);
+  border-color:var(--sage);
 }
 
-@media (max-width: 700px) {
-  .small-title { letter-spacing: 6px; }
+section{
+  padding:58px 0;
+  border-bottom:1px solid rgba(244,241,234,.14);
+}
 
-  section { padding: 58px 18px; }
+h2{
+  color:var(--coral);
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:400;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin:0 0 28px;
+}
 
-  .hero-content {
-    padding: 40px 20px;
+h2::before{
+  content:"❧ ";
+  color:var(--olive);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+}
+
+.card{
+  background:rgba(37,37,34,.72);
+  border:2px solid rgba(154,161,123,.55);
+  border-radius:8px;
+  padding:28px;
+  min-height:170px;
+}
+
+.card h3{
+  color:var(--sage);
+  font-size:1.45rem;
+  font-weight:400;
+  margin:0 0 12px;
+}
+
+.card p{
+  color:var(--chalk);
+  margin:0;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.chalk-doodle{
+  min-height:230px;
+  border:2px dashed rgba(201,198,190,.35);
+  display:grid;
+  place-items:center;
+  color:var(--chalk-grey);
+  font-size:4rem;
+}
+
+.qualifications ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.qualifications li{
+  margin:12px 0;
+  color:var(--chalk);
+}
+
+.qualifications li::before{
+  content:"☆ ";
+  color:var(--gold);
+}
+
+.contact-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  border:2px solid rgba(154,161,123,.55);
+  border-radius:8px;
+  padding:30px;
+  background:rgba(37,37,34,.72);
+}
+
+.contact-box a{
+  color:var(--chalk);
+  text-decoration:none;
+}
+
+.contact-box strong{
+  color:var(--coral);
+}
+
+footer{
+  text-align:center;
+  padding:30px 0 10px;
+  color:var(--chalk-grey);
+}
+
+@media(max-width:760px){
+  nav{
+    display:block;
+    text-align:center;
   }
 
-  .button {
-    width: 100%;
-    max-width: 280px;
+  nav a{
+    display:inline-block;
+    margin:10px;
+  }
+
+  .about-grid,
+  .contact-box{
+    grid-template-columns:1fr;
+  }
+
+  .wrapper{
+    padding:18px;
   }
 }
 </style>
@@ -223,32 +284,48 @@ footer {
 
 <body>
 
-<section class="hero">
-  <div class="hero-content">
-    <div class="small-title">Teacher</div>
+<div class="wrapper">
 
+<nav>
+  <div class="brand">Teacher <span>Malie</span></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#qualifications">Qualifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="teacher">Teacher</div>
     <h1>Malie</h1>
+    <div class="tagline">It takes a village...</div>
 
-    <p class="tagline">It takes a village...</p>
-
-    <p class="subtext">
+    <p class="intro">
       CELTA-certified Online English Tutor helping learners and professionals build confidence in English.
     </p>
 
+    <p class="services-line">
+      General English <span>•</span> Business English <span>•</span> IELTS Preparation <span>•</span> Young Learners
+    </p>
+
     <div class="button-group">
-      <a class="button primary" href="mailto:hello@malie.me">Book a Lesson</a>
-      <a class="button secondary" href="#services">View Services</a>
+      <a class="button primary" href="mailto:hello@malie.me">Book a Lesson →</a>
+      <a class="button secondary" href="#services">View Services →</a>
     </div>
   </div>
-</section>
+</header>
 
-<section>
+<section id="about">
   <h2>About Me</h2>
 
-  <div class="card">
+  <div class="about-grid">
     <p>
       I’m Malie Brown, a CELTA and TEFL-certified Online English Tutor from South Africa with over seven years of experience teaching learners worldwide. I specialise in General English, Business English, IELTS preparation, pronunciation, fluency development, and learner confidence.
     </p>
+
+    <div class="chalk-doodle">✎</div>
   </div>
 </section>
 
@@ -272,50 +349,37 @@ footer {
     </div>
 
     <div class="card">
-      <h3>IELTS & Cambridge Support</h3>
+      <h3>IELTS & Cambridge</h3>
       <p>Structured exam preparation, speaking practice, feedback, and lesson planning.</p>
     </div>
   </div>
 </section>
 
-<section>
+<section id="qualifications" class="qualifications">
   <h2>Qualifications</h2>
 
-  <div class="grid">
-    <div class="card">
-      <h3>CELTA</h3>
-      <p>Certificate in Teaching English to Speakers of Other Languages.</p>
-    </div>
-
-    <div class="card">
-      <h3>TEFL</h3>
-      <p>Certified English language teacher.</p>
-    </div>
-
-    <div class="card">
-      <h3>STEM.org Certified™ Master Trainer</h3>
-      <p>STEM and inquiry-based learning integration.</p>
-    </div>
-
-    <div class="card">
-      <h3>BCom Project Management</h3>
-      <p>MANCOSA student.</p>
-    </div>
-  </div>
+  <ul>
+    <li><strong>CELTA</strong> — Certificate in Teaching English to Speakers of Other Languages</li>
+    <li><strong>TEFL</strong> — Certified English Language Teacher</li>
+    <li><strong>STEM.org Certified™ Master Trainer</strong> — STEM and inquiry-based learning integration</li>
+    <li><strong>BCom Project Management</strong> — MANCOSA student</li>
+  </ul>
 </section>
 
-<section class="contact">
+<section id="contact">
   <h2>Contact</h2>
 
-  <div class="card">
-    <p>Email: <a href="mailto:hello@malie.me">hello@malie.me</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/maliebrown" target="_blank">linkedin.com/in/maliebrown</a></p>
+  <div class="contact-box">
+    <p><strong>Email</strong><br><a href="mailto:hello@malie.me">hello@malie.me</a></p>
+    <p><strong>LinkedIn</strong><br><a href="https://linkedin.com/in/maliebrown" target="_blank">linkedin.com/in/maliebrown</a></p>
   </div>
 </section>
 
 <footer>
   © 2026 Teacher Malie • malie.me
 </footer>
+
+</div>
 
 </body>
 </html>
