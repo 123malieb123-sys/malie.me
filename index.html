@@ -190,7 +190,32 @@ footer {
   padding: 35px 0 10px;
   color: var(--sage);
 }
+section {
+  margin-bottom: 30px;
+}
 
+.about-box,
+.card,
+.qualifications ul,
+.contact-box {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.grid {
+  margin-top: 30px;
+}
+
+.about-box {
+  padding: 42px;
+}
+
+.card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
 @media(max-width:760px) {
   .wrapper { padding: 20px; }
 
@@ -243,42 +268,42 @@ footer {
   <h2>About Me</h2>
 
   <div class="about-box">
-    <p>Hello, I’m Malie Brown — a CELTA-certified Online English Tutor with over 7 years of experience helping learners worldwide build confidence and fluency in English.</p>
+  <p>Hello, I’m Malie Brown — a CELTA-certified Online English Tutor with over 7 years of experience helping learners build confidence and fluency in English.</p>
 
-    <p>I specialise in General English, Business English, IELTS/Cambridge preparation, and young learner instruction, creating lessons that are practical, engaging, and tailored to each student’s goals.</p>
+  <p>I specialise in General English, Business English, IELTS/Cambridge preparation, and young learner instruction. My lessons are practical, supportive, and tailored to each student’s goals.</p>
 
-    <p>My teaching approach focuses on real-world communication, pronunciation, fluency, and learner confidence. I believe students learn best in supportive environments where lessons are interactive, structured, and adapted to individual learning styles.</p>
+  <p>My teaching focuses on real-world communication, pronunciation, fluency, and confidence. I also bring experience in business, administration, recruitment, and client communication, which helps me support adult learners and professionals.</p>
 
-    <p>Alongside teaching, I am currently studying toward a BCom in Project Management and am also a STEM.org Certified™ Master Trainer, allowing me to integrate creativity, critical thinking, and digital learning tools into my lessons.</p>
-
-    <p>Before moving into education, I gained professional experience in insurance, administration, recruitment, and client communication roles. This background helps me support adult learners and professionals preparing for interviews, presentations, workplace communication, and international opportunities.</p>
-
-    <p>I am passionate about helping students communicate naturally, grow in confidence, and achieve meaningful progress in English.</p>
-  </div>
+  <p>I am currently studying toward a BCom in Project Management and am also a STEM.org Certified™ Master Trainer.</p>
+</div>
 </section>
 
 <section id="services">
   <h2>Teaching Services</h2>
 
   <div class="grid">
+    <section id="services">
+  <h2>Teaching Services</h2>
+
+  <div class="grid">
     <div class="card">
       <h3>General English</h3>
-      <p>Build fluency, grammar, vocabulary, pronunciation, and everyday communication skills.</p>
+      <p>Improve grammar, vocabulary, pronunciation, fluency, and everyday communication.</p>
     </div>
 
     <div class="card">
       <h3>Business English</h3>
-      <p>Practise workplace English, interviews, meetings, presentations, and professional communication.</p>
+      <p>Build confidence for interviews, meetings, presentations, emails, and workplace conversations.</p>
+    </div>
+
+    <div class="card">
+      <h3>Exam Preparation</h3>
+      <p>Focused IELTS and Cambridge speaking practice, feedback, structure, and exam confidence.</p>
     </div>
 
     <div class="card">
       <h3>Young Learners</h3>
-      <p>Patient, creative, and encouraging lessons designed to help children enjoy learning English.</p>
-    </div>
-
-    <div class="card">
-      <h3>IELTS & Cambridge</h3>
-      <p>Structured exam preparation, speaking practice, feedback, and lesson planning.</p>
+      <p>Creative, patient, and engaging lessons that help children enjoy learning English.</p>
     </div>
   </div>
 </section>
